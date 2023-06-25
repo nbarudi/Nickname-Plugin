@@ -64,6 +64,4 @@ class Abstractedv1_20_R1(helper: AbstractedLink) : AbstractedHandler(helper) {
             otherPlayer.showPlayer(helper.instance, player)
         }
     }
-
-
 }
