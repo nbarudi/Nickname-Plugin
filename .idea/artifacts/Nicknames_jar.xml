@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Nicknames:jar">
+    <output-path>$PROJECT_DIR$/../../1.20/plugins</output-path>
+    <root id="archive" name="Nicknames.jar">
+      <element id="module-output" name="Nicknames" />
+    </root>
+  </artifact>
+</component>
