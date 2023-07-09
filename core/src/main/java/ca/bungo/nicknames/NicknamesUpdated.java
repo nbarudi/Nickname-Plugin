@@ -37,6 +37,8 @@ public final class NicknamesUpdated extends JavaPlugin {
 
         this.registerCommands();
         this.registerEvents();
+
+        this.saveDefaultConfig();
     }
 
     @Override

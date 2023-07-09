@@ -60,7 +60,14 @@ public class NicknameCommand extends Command {
             StringBuilder builder = new StringBuilder();
             for(String s : args)
                 builder.append(s).append(" ");
-            NicknamesUpdated.getInstance().nicknameManager.nicknamePlayer(player, builder.substring(0, builder.length()-1));
+            String name = builder.substring(0, builder.length()-1);
+            int maxLength = NicknamesUpdated.getInstance().getConfig().getInt("max-name-length", 150);
+            if(name.length() > maxLength){
+                player.sendMessage(Component.text("Error! Your nickname is too long! ", NamedTextColor.DARK_RED)
+                        .append(Component.text("Max Name Size: " + maxLength, NamedTextColor.YELLOW)));
+                return false;
+            }
+            NicknamesUpdated.getInstance().nicknameManager.nicknamePlayer(player, name);
         }
         updateShownNames();
         return false;
