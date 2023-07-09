@@ -20,7 +20,7 @@ public class NicknameCommand extends Command {
         super(name);
         this.description = "Change your name!";
         this.usageMessage = "/nick <NAME> || /unnick || /shownames";
-        this.setAliases(List.of("unnick", "shownames"));
+        this.setAliases(List.of("unnick", "names"));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class NicknameCommand extends Command {
             NicknamesUpdated.getInstance().nicknameManager.unnicknamePlayer(player);
             player.sendMessage(Component.text("Removed your nickname!", NamedTextColor.YELLOW));
         }
-        else if(label.equalsIgnoreCase("shownames") || label.equalsIgnoreCase("nicknames:shownames")){
+        else if(label.equalsIgnoreCase("names") || label.equalsIgnoreCase("nicknames:names")){
             if(showingNames.contains(player)){
                 showingNames.remove(player);
                 NicknamesUpdated.getInstance().nicknameManager.createLocalized(player, false);
