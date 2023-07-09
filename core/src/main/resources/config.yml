@@ -1,0 +1,13 @@
+#Switch modes for how Zombies are managed
+#Modes Are: float OR drown
+#
+#Float: Zombies will automatically attempt to swim up when it water using Path Goals
+#     - This does mean zombies will not try to target players in water
+#Drown: Zombies will die if they are turned into Drowned instead of converted
+#     - Normal functionality just no Drowned spawn.
+stop-mode: float
+
+#A List of Entities to modify the AI for.
+#This will use the Bukkit Entity Types located here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+#It will attempt to modify all entities in this list, but it will not actually function unless they extend a Pathfinder Entity
+entity-list: []

@@ -1,6 +1,0 @@
-name: Nicknames
-version: '${project.version}'
-main: ca.bungo.papernicknames.Nicknames
-api-version: 1.13
-authors:
-  - Bungo
