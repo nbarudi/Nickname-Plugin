@@ -19,7 +19,7 @@ public class NicknameCommand extends Command {
     public NicknameCommand(@NotNull String name) {
         super(name);
         this.description = "Change your name!";
-        this.usageMessage = "/nick <NAME> || /unnick || /shownames";
+        this.usageMessage = "/nick <NAME> || /unnick || /names";
         this.setAliases(List.of("unnick", "names"));
     }
 
