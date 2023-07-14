@@ -36,7 +36,7 @@ public class Nickname {
     public void showRealName(Player requester, boolean enable){
         if(enable){
             nametag.setLocalizedName(MiniMessage.miniMessage()
-                    .deserialize("<white>" + this.nickname + " <gray>[" +realname + "]"), requester);
+                    .deserialize("<white>" + this.nickname + "<newline><gray>[" +realname + "]"), requester);
         } else{
             nametag.setLocalizedName(MiniMessage.miniMessage().deserialize(nickname), requester);
         }
