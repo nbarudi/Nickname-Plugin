@@ -1,4 +1,4 @@
-package ca.bungo.nicknames.abstracted.v1_20_R1
+package ca.bungo.nicknames.abstracted.v1_20_R2
 
 import ca.bungo.nicknames.abstracted.AbstractedHandler
 import ca.bungo.nicknames.abstracted.AbstractedLink
@@ -15,12 +15,12 @@ import net.minecraft.world.entity.Display
 import net.minecraft.world.entity.Display.TextDisplay
 import net.minecraft.world.entity.EntityType
 import org.bukkit.Bukkit
-import org.bukkit.craftbukkit.v1_20_R1.entity.CraftPlayer
+import org.bukkit.craftbukkit.v1_20_R2.entity.CraftPlayer
 import org.bukkit.entity.Player
 import org.joml.Quaternionf
 import org.joml.Vector3f
 
-class Abstractedv1_20_R1(helper: AbstractedLink) : AbstractedHandler(helper) {
+class Abstractedv1_20_R2(helper: AbstractedLink) : AbstractedHandler(helper) {
 
     class LocalNametag(val player: Player) : INametag {
         private var mounted: TextDisplay
@@ -37,8 +37,8 @@ class Abstractedv1_20_R1(helper: AbstractedLink) : AbstractedHandler(helper) {
 
             mounted.flags = flagBits
             mounted.brightnessOverride = Brightness(15, 15)
-            mounted.interpolationDuration = 0
-            mounted.interpolationDelay = -1
+//            mounted.transformationInterpolationDuration = 0
+//            mounted.transformationInterpolationDelay = -1
             mounted.setTransformation(Transformation(Vector3f(0F, 0.7F, 0F), Quaternionf(), null, null))
 
             player.addPassenger(mounted.bukkitEntity)
